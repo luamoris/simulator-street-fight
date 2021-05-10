@@ -6,7 +6,9 @@
 	"scripts": {
 		"start": "cross-env NODE_ENV=development webpack-dev-server --open --inline",
 		"build": "rimraf dist && cross-env NODE_ENV=production webpack --progress",
-		"dev": "rimraf dist && cross-env NODE_ENV=development webpack --progress"
+		"dev": "rimraf dist && cross-env NODE_ENV=development webpack --progress",
+		"lint": "eslint ./src/**/*.js",
+		"stylelint": "stylelint ./src/**/*.css"
 	},
 	"repository": {
 		"type": "git",
@@ -30,6 +32,9 @@
 		"copy-webpack-plugin": "8.1.1",
 		"cross-env": "7.0.3",
 		"css-loader": "5.2.4",
+		"eslint": "7.26.0",
+		"eslint-config-airbnb-base": "14.2.1",
+		"eslint-plugin-import": "2.22.1",
 		"file-loader": "6.2.0",
 		"html-webpack-plugin": "5.3.1",
 		"imagemin-webpack-plugin": "2.4.2",
@@ -38,6 +43,9 @@
 		"postcss-loader": "5.2.0",
 		"rimraf": "3.0.2",
 		"style-loader": "2.0.0",
+		"stylelint": "13.13.1",
+		"stylelint-config-standard": "22.0.0",
+		"stylelint-order": "4.1.0",
 		"terser-webpack-plugin": "5.1.1",
 		"webpack": "5.36.2",
 		"webpack-bundle-analyzer": "4.4.1",

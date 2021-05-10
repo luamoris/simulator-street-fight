@@ -1,4 +1,4 @@
-// ====================================================================================== WEBPACK CONFIG
+// ============================================================================ WEBPACK CONFIG
 
 const path = require('path');
 
@@ -14,7 +14,7 @@ const BabelMinifyPlugin = require('babel-minify-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-// ====================================================================================== MODE
+// ============================================================================ MODE
 
 const MODE = {
 	CURRENT: process.env.NODE_ENV,
@@ -22,7 +22,7 @@ const MODE = {
 	isPRODUCTION: process.env.NODE_ENV === 'production',
 };
 
-// ====================================================================================== FUNCTION
+// ============================================================================ FUNCTION
 
 // ================================ Resolve
 const resolvePath = (relativePath) => path.resolve(__dirname, relativePath);
@@ -31,7 +31,7 @@ const resolvePath = (relativePath) => path.resolve(__dirname, relativePath);
 const getFilePath = (dir, title, exp) => `${dir}/${exp}/${MODE.isPRODUCTION ? `${title}.[contenthash:8].${exp}` : MODE.isDEVELOPMENT && `${title}.${exp}`}`;
 const getFileChunk = (dir, title, exp) => `${dir}/${exp}/${MODE.isPRODUCTION ? `${title}.[contenthash:8].chunk.${exp}` : MODE.isDEVELOPMENT && `${title}.chunk.${exp}`}`;
 
-// ====================================================================================== PATH
+// ============================================================================ PATH
 
 const PATH = {
 	ENTRY: {
@@ -67,7 +67,7 @@ const TEST = {
 	JS: /\.js$/,
 };
 
-// ======================================================================================
+// ============================================================================
 
 // ================================ PLUGINS
 const getPlugins = () => {
@@ -208,7 +208,7 @@ const getServer = () => {
 	return server;
 };
 
-// ======================================================================================
+// ============================================================================
 
 const CONFIG = {
 	mode: MODE.CURRENT,
@@ -243,5 +243,5 @@ if (MODE.isPRODUCTION) {
 	};
 }
 
-// ======================================================================================
+// ============================================================================
 module.exports = CONFIG;

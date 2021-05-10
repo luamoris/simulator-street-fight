@@ -1,5 +1,5 @@
 // ~~~~~~~~~~~ SCRIPT
-import './js/#script.js';
+import './js/#script';
 
 // ~~~~~~~~~~~ STYLE
 import './css/#style.css';
