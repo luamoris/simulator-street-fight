@@ -35,7 +35,7 @@ const getFileChunk = (dir, title, exp) => `${dir}/${exp}/${MODE.isPRODUCTION ? `
 
 const PATH = {
 	ENTRY: {
-		MAIN: resolvePath('src/app.js'),
+		MAIN: resolvePath('src/index.js'),
 	},
 	INPUT: {
 		HTML: resolvePath('src/index.html'),
